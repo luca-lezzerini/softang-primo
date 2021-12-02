@@ -1,0 +1,20 @@
+<button (click)="incrementa()">+</button>
+<!--interpolazione-->
+{{contatore}}
+<hr>
+<input type="number" [(ngModel)]="add1">{{add1}} 
++
+<input type="number" [(ngModel)]="add2">
+<button (click)="somma()">=</button>
+{{add1+add2}}
+<br>
+risultato = {{risultato}}
+<hr>
+<input type="text" [(ngModel)]="prodotto">
+<button (click)="add()">Aggiungi</button>
+<ul>
+  <li *ngFor="let p of prodotti; index as i">
+    {{p}}
+    <button (click)="cancella(i)">X</button>
+  </li>
+</ul>
